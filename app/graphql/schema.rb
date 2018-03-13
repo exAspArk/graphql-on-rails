@@ -1,3 +1,3 @@
-Schema = GraphQL::Schema.define do
-  query Types::QueryType
+class Schema < GraphQL::Schema
+  query Types::Query
 end
