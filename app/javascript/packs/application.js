@@ -6,8 +6,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route } from "react-router-dom"
 
-const Home = () => <h1>Home</h1>
-const Post = () => <h1>Post</h1>
+import Home from '../routes/home'
+import Post from '../routes/post'
 
 const App = () => (
   <Router>
