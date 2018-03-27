@@ -123,4 +123,9 @@ TypeError: Cannot read property 'compile' of undefined
 ```
 > yarn add -D apollo-codegen
 > yarn graphql
+
+> yarn add -D babel-preset-flow
+> yarn add -D flow-bin
+> flow init
+> yarn flow
 ```

@@ -1,0 +1,12 @@
+[ignore]
+
+[include]
+
+[libs]
+app/javascript/types/
+
+[lints]
+
+[options]
+
+[strict]
