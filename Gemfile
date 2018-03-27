@@ -29,6 +29,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # gem 'rack-cors'
 
 gem 'graphql', '~> 1.8.0.pre9'
+gem 'graphql-errors'
 
 group :development, :test do
   gem 'pry-byebug'

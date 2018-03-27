@@ -55,6 +55,8 @@ GEM
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     graphql (1.8.0.pre9)
+    graphql-errors (0.2.0)
+      graphql (>= 1.6.0, < 2)
     i18n (1.0.0)
       concurrent-ruby (~> 1.0)
     listen (3.1.5)
@@ -149,6 +151,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.1.0)
   graphql (~> 1.8.0.pre9)
+  graphql-errors
   listen (>= 3.0.5, < 3.2)
   pry-byebug
   puma (~> 3.11)
