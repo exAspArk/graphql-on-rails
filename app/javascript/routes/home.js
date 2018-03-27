@@ -1,6 +1,9 @@
 import React from 'react'
 import Navbar from '../components/navbar'
 import { Link } from "react-router-dom"
+import { Query } from 'react-apollo'
+
+import query from './home.gql'
 
 const Home = () => {
   return (
@@ -70,4 +73,11 @@ const Home = () => {
   )
 }
 
-export default Home
+export default () => (
+  <Query query={query}>
+    {(props) => {
+      console.log(props)
+      return <Home />
+    }}
+  </Query>
+)

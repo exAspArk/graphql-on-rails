@@ -4,6 +4,7 @@
     "apollo-boost": "^0.1.4",
     "babel-preset-react": "^6.24.1",
     "graphiql": "^0.11.11",
+    "graphql-tag": "^2.8.0",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-apollo": "^2.1.1",
