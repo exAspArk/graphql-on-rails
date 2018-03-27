@@ -5,7 +5,9 @@ import { Query } from 'react-apollo'
 
 import query from './home.gql'
 
-const Home = () => {
+const Home = (props) => {
+  const [post1, post2, post3] = props.posts
+
   return (
     <div>
       <div className="container">
@@ -25,10 +27,10 @@ const Home = () => {
 
         <div className="jumbotron d-flex p-5 text-white rounded bg-dark">
           <div className="col-6 px-0">
-            <h1 className="display-4">REST-in-peace API vs GraphQL</h1>
-            <p className="lead my-3">GraphQL is one of the most hot topics at RailsConf 2018. ts popularity is growing rapidly. A lot of companies such as Facebook, GitHub, Twitter, Coursera, Shopify are using it. Why?</p>
+            <h1 className="display-4">{post1.title}</h1>
+            <p className="lead my-3">{post1.description}</p>
             <p className="lead mb-0">
-              <Link to="/posts/1" className="text-white font-weight-bold">Continue reading...</Link>
+              <Link to={`/posts/${post1.id}`} className="text-white font-weight-bold">Continue reading...</Link>
             </p>
           </div>
           <div className="col-6 px-0 mx-auto">
@@ -41,14 +43,14 @@ const Home = () => {
             <div className="card flex-row mb-4 box-shadow h-250">
               <div className="card-body d-flex flex-column align-items-start">
                 <h3 className="mb-0">
-                  <Link to="/posts/2" className="text-dark">Making Client and Server Fit Together with GraphQL</Link>
+                  <Link to={`/posts/${post2.id}`} className="text-dark">{post2.title}</Link>
                 </h3>
                 <div className="mb-1 text-muted">
-                  <span>March 19, 2018 by </span>
-                  <a href="#">tenderlove</a>
+                  <span>{(new Date(post2.createdAt)).toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })} by </span>
+                  <a href="#">{post2.user.name}</a>
                 </div>
-                <p className="card-text mb-auto">What is GraphQL? Is it possible to gradually migrate an existing old Rails application to GraphQL?</p>
-                <Link to="/posts/2" className="my-2" href="#">Continue reading...</Link>
+                <p className="card-text mb-auto">{post2.description}</p>
+                <Link to={`/posts/${post2.id}`} className="my-2" href="#">Continue reading...</Link>
               </div>
             </div>
           </div>
@@ -56,14 +58,14 @@ const Home = () => {
             <div className="card flex-row mb-4 box-shadow h-250">
               <div className="card-body d-flex flex-column align-items-start">
                 <h3 className="mb-0">
-                  <Link to="/posts/3" className="text-dark">Should Rubyists learn modern JS?</Link>
+                  <Link to={`/posts/${post3.id}`} className="text-dark">{post3.title}</Link>
                 </h3>
                 <div className="mb-1 text-muted">
-                  <span>March 19, 2018 by </span>
-                  <a href="#">eileencodes</a>
+                  <span>{(new Date(post3.createdAt)).toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })} by </span>
+                  <a href="#">{post3.user.name}</a>
                 </div>
-                <p className="card-text mb-auto">React, Angular, Vue, Elm, Stimulus, etc. How to stay staying sane in this insane world?</p>
-                <Link to="/posts/3" className="my-2" href="#">Continue reading...</Link>
+                <p className="card-text mb-auto">{post3.description}</p>
+                <Link to={`/posts/${post3.id}`} className="my-2" href="#">Continue reading...</Link>
               </div>
             </div>
           </div>
@@ -76,8 +78,9 @@ const Home = () => {
 export default () => (
   <Query query={query}>
     {(props) => {
-      console.log(props)
-      return <Home />
+      if (props.loading) return <div>Loading...</div>
+      if (props.error) return <div>Error =/</div>
+      return <Home posts={props.data.posts} />
     }}
   </Query>
 )
