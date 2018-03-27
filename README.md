@@ -104,3 +104,9 @@ TypeError: Cannot read property 'compile' of undefined
 > bundle exec rails g model post user:references title:string description:string content:text
 > bundle exec rake db:create db:migrate db:seed
 ```
+
+## Adding GraphQL
+
+```
+> bundle exec rails generate graphql:install
+```
