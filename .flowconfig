@@ -8,5 +8,6 @@ app/javascript/types/
 [lints]
 
 [options]
+module.name_mapper.extension='gql' -> '<PROJECT_ROOT>/app/javascript/utils/empty-object.js'
 
 [strict]

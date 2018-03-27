@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react'
 import Navbar from '../components/navbar'
 import { Link } from "react-router-dom"
@@ -5,7 +7,7 @@ import { Query } from 'react-apollo'
 
 import query from './home.gql'
 
-const Home = (props) => {
+const Home = (props: HomeQuery) => {
   const [post1, post2, post3] = props.posts
 
   return (

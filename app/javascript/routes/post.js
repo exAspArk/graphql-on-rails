@@ -1,10 +1,12 @@
+// @flow
+
 import React from 'react'
 import { Query } from 'react-apollo'
 import Navbar from '../components/navbar'
 
 import query from './post.gql'
 
-const Post = ({ post }) => (
+const Post = ({ post }: PostQuery) => (
   <div>
     <div className="container">
       <Navbar />
@@ -43,8 +45,8 @@ const Post = ({ post }) => (
   </div>
 )
 
-export default (props) => {
-  const variables = { id: props.match.params.id };
+export default (props: { match: { params: { id: string } } }) => {
+  const variables: PostQueryVariables = { id: props.match.params.id };
 
   return (
     <Query query={query} variables={variables}>
