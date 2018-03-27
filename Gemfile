@@ -32,6 +32,7 @@ gem 'graphql', '~> 1.8.0.pre9'
 gem 'graphql-errors'
 gem 'graphql-guard'
 gem 'apollo-tracing'
+gem 'batch-loader'
 
 group :development, :test do
   gem 'pry-byebug'

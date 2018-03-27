@@ -6,6 +6,7 @@ class Schema < GraphQL::Schema
     not_authorized: ->(type, field) { GraphQL::ExecutionError.new("Not authorized to access #{type}.#{field}") }
   )
   use ApolloTracing.new
+  use BatchLoader::GraphQL
 end
 
 GraphQL::Errors.configure(Schema) do

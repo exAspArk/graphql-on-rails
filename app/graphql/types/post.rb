@@ -7,6 +7,13 @@ class Types::Post < GraphQL::Schema::Object
   field :user, Types::User, null: false
   field :score, Int, null: true
 
+  def user
+    BatchLoader.for(object.user_id).batch do |user_ids, loader|
+      users = ::User.where(id: user_ids)
+      users.each { |user| loader.call(user.id, user) }
+    end
+  end
+
   def score
     raise "External API failed"
   end

@@ -45,6 +45,7 @@ GEM
     apollo-tracing (1.5.0)
       graphql (>= 1.7.0, < 2)
     arel (9.0.0)
+    batch-loader (1.2.1)
     bootsnap (1.1.8)
       msgpack (~> 1.0)
     builder (3.2.3)
@@ -154,6 +155,7 @@ PLATFORMS
 
 DEPENDENCIES
   apollo-tracing
+  batch-loader
   bootsnap (>= 1.1.0)
   graphql (~> 1.8.0.pre9)
   graphql-errors
