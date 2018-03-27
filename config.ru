@@ -2,4 +2,6 @@
 
 require_relative 'config/environment'
 
+ApolloTracing.start_proxy('config/apollo-engine-proxy.json')
+
 run Rails.application

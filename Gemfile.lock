@@ -42,6 +42,8 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    apollo-tracing (1.5.0)
+      graphql (>= 1.7.0, < 2)
     arel (9.0.0)
     bootsnap (1.1.8)
       msgpack (~> 1.0)
@@ -151,6 +153,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  apollo-tracing
   bootsnap (>= 1.1.0)
   graphql (~> 1.8.0.pre9)
   graphql-errors

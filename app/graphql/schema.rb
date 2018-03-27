@@ -5,6 +5,7 @@ class Schema < GraphQL::Schema
     policy_object: GraphqlPolicy,
     not_authorized: ->(type, field) { GraphQL::ExecutionError.new("Not authorized to access #{type}.#{field}") }
   )
+  use ApolloTracing.new
 end
 
 GraphQL::Errors.configure(Schema) do

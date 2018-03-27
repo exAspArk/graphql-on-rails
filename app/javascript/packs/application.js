@@ -12,7 +12,7 @@ import Home from '../routes/home'
 import Post from '../routes/post'
 import Graphiql from '../routes/graphiql'
 
-const apolloClient = new ApolloClient({ uri: 'http://localhost:3000/graphql' })
+const apolloClient = new ApolloClient({ uri: 'http://localhost:3001/graphql' })
 
 const App = () => (
   <ApolloProvider client={apolloClient}>

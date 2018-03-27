@@ -31,6 +31,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'graphql', '~> 1.8.0.pre9'
 gem 'graphql-errors'
 gem 'graphql-guard'
+gem 'apollo-tracing'
 
 group :development, :test do
   gem 'pry-byebug'
