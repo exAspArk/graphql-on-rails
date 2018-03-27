@@ -12,7 +12,11 @@
     "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
+    "apollo-codegen": "^0.19.0",
     "webpack-cli": "^2.0.13",
     "webpack-dev-server": "^2.11.1"
+  },
+  "scripts": {
+    "graphql": "apollo-codegen introspect-schema http://localhost:3000/graphql --output schema.json && apollo-codegen generate **/*.gql --schema schema.json --target flow --output app/javascript/types/graphql.js"
   }
 }

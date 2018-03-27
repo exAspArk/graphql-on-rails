@@ -117,3 +117,10 @@ TypeError: Cannot read property 'compile' of undefined
 > yarn add apollo-boost
 > yarn add react-apollo
 ```
+
+## Adding Flow
+
+```
+> yarn add -D apollo-codegen
+> yarn graphql
+```
