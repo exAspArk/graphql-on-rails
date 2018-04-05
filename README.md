@@ -110,3 +110,10 @@ TypeError: Cannot read property 'compile' of undefined
 ```
 > bundle exec rails generate graphql:install
 ```
+
+## Adding Apollo Client
+
+```
+> yarn add apollo-boost
+> yarn add react-apollo
+```

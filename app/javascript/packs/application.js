@@ -5,19 +5,25 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route } from "react-router-dom"
+import ApolloClient from 'apollo-boost'
+import { ApolloProvider } from 'react-apollo'
 
 import Home from '../routes/home'
 import Post from '../routes/post'
 import Graphiql from '../routes/graphiql'
 
+const apolloClient = new ApolloClient({ uri: 'http://localhost:3000/graphql' })
+
 const App = () => (
-  <Router>
-    <div>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/posts/:id" component={Post} />
-      <Route exact path="/graphiql" component={Graphiql} />
-    </div>
-  </Router>
+  <ApolloProvider client={apolloClient}>
+    <Router>
+      <div>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/posts/:id" component={Post} />
+        <Route exact path="/graphiql" component={Graphiql} />
+      </div>
+    </Router>
+  </ApolloProvider>
 )
 
 document.addEventListener('DOMContentLoaded', () => {
