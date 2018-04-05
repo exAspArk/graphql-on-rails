@@ -91,3 +91,9 @@ TypeError: Cannot read property 'compile' of undefined
 ```
 > yarn add react-router-dom
 ```
+
+## Adding GraphiQL
+
+```
+> yarn add graphiql
+```
