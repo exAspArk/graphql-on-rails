@@ -96,4 +96,11 @@ TypeError: Cannot read property 'compile' of undefined
 
 ```
 > yarn add graphiql
+
+## Adding models
+
+```
+> bundle exec rails g model user name:string
+> bundle exec rails g model post user:references title:string description:string content:text
+> bundle exec rake db:create db:migrate db:seed
 ```
