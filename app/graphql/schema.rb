@@ -1,5 +1,10 @@
 class Schema < GraphQL::Schema
   query Types::Query
+
+  use GraphQL::Guard.new(
+    policy_object: GraphqlPolicy,
+    not_authorized: ->(type, field) { GraphQL::ExecutionError.new("Not authorized to access #{type}.#{field}") }
+  )
 end
 
 GraphQL::Errors.configure(Schema) do

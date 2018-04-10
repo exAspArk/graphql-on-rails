@@ -57,6 +57,8 @@ GEM
     graphql (1.8.0.pre9)
     graphql-errors (0.2.0)
       graphql (>= 1.6.0, < 2)
+    graphql-guard (1.0.0)
+      graphql (>= 1.6.0, < 2)
     i18n (1.0.0)
       concurrent-ruby (~> 1.0)
     listen (3.1.5)
@@ -152,6 +154,7 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   graphql (~> 1.8.0.pre9)
   graphql-errors
+  graphql-guard
   listen (>= 3.0.5, < 3.2)
   pry-byebug
   puma (~> 3.11)
