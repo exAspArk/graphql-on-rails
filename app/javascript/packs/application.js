@@ -4,9 +4,18 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter as Router, Route } from "react-router-dom"
+
+const Home = () => <h1>Home</h1>
+const Post = () => <h1>Post</h1>
 
 const App = () => (
-  <div>Hello React!</div>
+  <Router>
+    <div>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/posts/:id" component={Post} />
+    </div>
+  </Router>
 )
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -85,3 +85,9 @@ TypeError: Cannot read property 'compile' of undefined
 > bundle
 > bundle exec rails s
 ```
+
+## Adding react-router-dom
+
+```
+> yarn add react-router-dom
+```

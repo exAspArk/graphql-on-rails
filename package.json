@@ -4,7 +4,8 @@
     "babel-preset-react": "^6.24.1",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
     "webpack-cli": "^2.0.13",
