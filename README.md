@@ -2,6 +2,10 @@
 
 ![](./public/screenshot.png)
 
+## Join our Slack
+
+:point_right: [http://bit.ly/graphql-on-rails-slack](http://bit.ly/graphql-on-rails-slack)
+
 ## Tech Stack
 
 * Ruby on Rails 5.2
@@ -96,6 +100,7 @@ TypeError: Cannot read property 'compile' of undefined
 
 ```
 > yarn add graphiql
+```
 
 ## Adding models
 
